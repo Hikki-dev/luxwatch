@@ -387,7 +387,6 @@ function showOrderSuccess()
         exit;
     }
 
-    // Fixed path - removed duplicate directory structure and corrected filename
     include __DIR__ . '/../src/Views/checkout/success.php';
 }
 

@@ -1,5 +1,5 @@
 <?php
-// src/Controllers/HomeController.php - FIXED VERSION WITH PROPER PAGINATION
+// src/Controllers/HomeController.php
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../models/Product.php';
 require_once __DIR__ . '/../models/Category.php';
@@ -61,7 +61,7 @@ class HomeController
             $params[':max_price'] = $max_price;
         }
 
-        // Get total count for pagination - FIXED
+        // Get total count for pagination
         $count_query = "SELECT COUNT(*) as total FROM products p WHERE p.is_active = 1 AND p.status = 'approved'";
 
         // Add the same filters to count query
@@ -109,7 +109,7 @@ class HomeController
         // Get all categories for filter
         $categories = $this->category->readAll();
 
-        // Pagination info - FIXED
+        // Pagination info
         $pagination = [
             'current_page' => $page_num,
             'total_pages' => $total_pages,

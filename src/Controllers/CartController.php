@@ -1,5 +1,5 @@
 <?php
-// src/Controllers/CartController.php - FIXED VERSION
+// src/Controllers/CartController.php
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../models/Cart.php';
 require_once __DIR__ . '/../models/Product.php';
@@ -30,7 +30,7 @@ class CartController
         include __DIR__ . '/../Views/cart/index.php';
     }
 
-    // Add to cart - FIXED VERSION
+    // Add to cart
     public function add()
     {
         requireAuth();
@@ -127,7 +127,7 @@ class CartController
         }
     }
 
-    // Update cart quantity - FIXED VERSION
+    // Update cart quantity
     public function update()
     {
         requireAuth();
@@ -184,7 +184,7 @@ class CartController
         redirect('cart');
     }
 
-    // Remove from cart - FIXED VERSION
+    // Remove from cart
     public function remove($cart_id)
     {
         requireAuth();

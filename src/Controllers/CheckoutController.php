@@ -261,13 +261,6 @@ class CheckoutController
             return false;
         }
 
-        // In a real application, you would:
-        // 1. Use a payment gateway API (Stripe, PayPal, etc.)
-        // 2. Tokenize the card data
-        // 3. Process the payment securely
-        // 4. Handle the response
-
-        // For demo purposes, simulate 95% success rate
         return rand(1, 100) <= 95;
     }
 

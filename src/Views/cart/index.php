@@ -1,5 +1,5 @@
 <?php
-// src/Views/cart/index.php - FIXED VERSION
+// src/Views/cart/index.php
 include __DIR__ . '/../layouts/header.php';
 ?>
 
