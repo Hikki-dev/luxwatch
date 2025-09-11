@@ -40,11 +40,11 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="<?php echo BASE_URL; ?>" class="text-gray-300 hover:text-luxury-gold transition-colors">Home</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>products" class="text-gray-300 hover:text-luxury-gold transition-colors">All Watches</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>brands" class="text-gray-300 hover:text-luxury-gold transition-colors">Brands</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>about" class="text-gray-300 hover:text-luxury-gold transition-colors">About Us</a></li>
-                    <li><a href="<?php echo BASE_URL; ?>services" class="text-gray-300 hover:text-luxury-gold transition-colors">Services</a></li>
+                    <li><a href="index.php?page=home" class="text-gray-300 hover:text-luxury-gold transition-colors">Home</a></li>
+                    <li><a href="index.php?page=products" class="text-gray-300 hover:text-luxury-gold transition-colors">All Watches</a></li>
+                    <li><a href="index.php?page=brands" class="text-gray-300 hover:text-luxury-gold transition-colors">Brands</a></li>
+                    <li><a href="index.php?page=about" class="text-gray-300 hover:text-luxury-gold transition-colors">About Us</a></li>
+                    <li><a href="index.php?page=services" class="text-gray-300 hover:text-luxury-gold transition-colors">Services</a></li>
                 </ul>
             </div>
 
@@ -93,9 +93,12 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 </script>
